@@ -1,0 +1,16 @@
+PODS:
+  - Performance (0.1.0)
+
+DEPENDENCIES:
+  - Performance (from `../`)
+
+EXTERNAL SOURCES:
+  Performance:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Performance: 6312652044f61fe902f1cc19d4ccfe27eba56de1
+
+PODFILE CHECKSUM: 59fc14d4fd3a811b1afea78cb6004c23de78eb89
+
+COCOAPODS: 1.2.0

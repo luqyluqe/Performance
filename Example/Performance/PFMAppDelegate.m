@@ -7,12 +7,14 @@
 //
 
 #import "PFMAppDelegate.h"
+#import "PFMMainThreadMonitor.h"
 
 @implementation PFMAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [[PFMMainThreadMonitor sharedMonitor] launch];
     return YES;
 }
 

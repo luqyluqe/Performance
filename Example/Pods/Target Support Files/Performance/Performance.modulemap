@@ -1,0 +1,6 @@
+framework module Performance {
+  umbrella header "Performance-umbrella.h"
+
+  export *
+  module * { export * }
+}
