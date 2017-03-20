@@ -14,6 +14,9 @@
 @property (atomic,strong) dispatch_semaphore_t startSema;
 @property (atomic,strong) dispatch_semaphore_t endSema;
 @property (atomic,assign) BOOL timedOut;
+@property (atomic,assign) CFAbsoluteTime startTime;
+@property (atomic,assign) CFAbsoluteTime endTime;
+@property (atomic,copy) NSString* callStack;
 
 @end
 
@@ -44,17 +47,20 @@
         switch (activity) {
             case kCFRunLoopAfterWaiting:
             {
+                self.startTime=CFAbsoluteTimeGetCurrent();
                 if (self.startSema) {
                     dispatch_semaphore_signal(self.startSema);
                 }
                 break;
             }
-            case kCFRunLoopBeforeSources:
-            {
-                break;
-            }
             case kCFRunLoopBeforeWaiting:
             {
+                self.endTime=CFAbsoluteTimeGetCurrent();
+                if (self.callStack) {
+                    NSString* border=@"================================================================================";
+                    NSLog(@"\ntime cost : %f\n%@\n%@\n%@\n\n",self.endTime-self.startTime,border,self.callStack,border);
+                    self.callStack=nil;
+                }
                 if (self.timedOut) {
                     self.timedOut=NO;
                 }else{
@@ -82,8 +88,7 @@
             long result=dispatch_semaphore_wait(self.endSema, dispatch_time(DISPATCH_TIME_NOW, self.timeout*NSEC_PER_SEC));
             self.timedOut=result!=0;
             if (self.timedOut) {
-                NSString* callStack=[BSBacktraceLogger bs_backtraceOfMainThread];
-                NSLog(@"%@",callStack);
+                self.callStack=[[BSBacktraceLogger bs_backtraceOfMainThread] stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\n"]];
             }
         }
     });
