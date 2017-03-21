@@ -77,21 +77,23 @@
     CFRunLoopRef runLoop=CFRunLoopGetMain();
     CFRunLoopAddObserver(runLoop, observer, kCFRunLoopCommonModes);
     
-    dispatch_queue_t monitorQueue=dispatch_queue_create("dispatch_queue_monitor", DISPATCH_QUEUE_SERIAL);
-    dispatch_async(monitorQueue, ^{
-        self.startSema=dispatch_semaphore_create(0);
-        while (YES) {
-            dispatch_semaphore_wait(self.startSema, DISPATCH_TIME_FOREVER);
-            if (!self.endSema) {
-                self.endSema=dispatch_semaphore_create(0);
-            }
-            long result=dispatch_semaphore_wait(self.endSema, dispatch_time(DISPATCH_TIME_NOW, self.timeout*NSEC_PER_SEC));
-            self.timedOut=result!=0;
-            if (self.timedOut) {
-                self.callStack=[[BSBacktraceLogger bs_backtraceOfMainThread] stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\n"]];
-            }
+    [NSThread detachNewThreadSelector:@selector(monitorRoutine) toTarget:self withObject:nil];
+}
+
+-(void)monitorRoutine
+{
+    self.startSema=dispatch_semaphore_create(0);
+    while (YES) {
+        dispatch_semaphore_wait(self.startSema, DISPATCH_TIME_FOREVER);
+        if (!self.endSema) {
+            self.endSema=dispatch_semaphore_create(0);
         }
-    });
+        long result=dispatch_semaphore_wait(self.endSema, dispatch_time(DISPATCH_TIME_NOW, self.timeout*NSEC_PER_SEC));
+        self.timedOut=result!=0;
+        if (self.timedOut) {
+            self.callStack=[[BSBacktraceLogger bs_backtraceOfMainThread] stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\n"]];
+        }
+    }
 }
 
 @end
