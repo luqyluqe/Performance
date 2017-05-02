@@ -27,3 +27,9 @@ luqyluqe, luqy.luqe@gmail.com
 ## License
 
 Performance is available under the MIT license. See the LICENSE file for more info.
+
+## Usage
+
+```objective-c
+[[PFMainThreadMonitor sharedMonitor] launch];
+```
