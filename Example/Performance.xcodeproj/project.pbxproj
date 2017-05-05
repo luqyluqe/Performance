@@ -8,11 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1070AC947027EB51D68E7676 /* Pods_Performance_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D0DE1D8C82DE69585CA9042 /* Pods_Performance_Tests.framework */; };
-		546DDB881E768295008CC3CF /* BSBacktraceLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 546DDB781E768295008CC3CF /* BSBacktraceLogger.m */; };
-		546DDB891E768295008CC3CF /* PFMMainThreadMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 546DDB7C1E768295008CC3CF /* PFMMainThreadMonitor.m */; };
-		546DDB8A1E768295008CC3CF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 546DDB7F1E768295008CC3CF /* Info.plist */; };
-		546DDB8B1E768295008CC3CF /* Performance.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 546DDB811E768295008CC3CF /* Performance.xcconfig */; };
-		546DDB8C1E768295008CC3CF /* Performance-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 546DDB821E768295008CC3CF /* Performance-dummy.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -45,16 +40,6 @@
 		1627E2F77C129E16D6A85413 /* Pods-Performance_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Performance_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Performance_Example/Pods-Performance_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		39A03BB94AE043B1529B89F1 /* Pods-Performance_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Performance_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Performance_Tests/Pods-Performance_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		3D0DE1D8C82DE69585CA9042 /* Pods_Performance_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Performance_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		546DDB771E768295008CC3CF /* BSBacktraceLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSBacktraceLogger.h; sourceTree = "<group>"; };
-		546DDB781E768295008CC3CF /* BSBacktraceLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSBacktraceLogger.m; sourceTree = "<group>"; };
-		546DDB7B1E768295008CC3CF /* PFMMainThreadMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFMMainThreadMonitor.h; sourceTree = "<group>"; };
-		546DDB7C1E768295008CC3CF /* PFMMainThreadMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFMMainThreadMonitor.m; sourceTree = "<group>"; };
-		546DDB7F1E768295008CC3CF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		546DDB801E768295008CC3CF /* Performance.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = Performance.modulemap; sourceTree = "<group>"; };
-		546DDB811E768295008CC3CF /* Performance.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Performance.xcconfig; sourceTree = "<group>"; };
-		546DDB821E768295008CC3CF /* Performance-dummy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Performance-dummy.m"; sourceTree = "<group>"; };
-		546DDB831E768295008CC3CF /* Performance-prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Performance-prefix.pch"; sourceTree = "<group>"; };
-		546DDB841E768295008CC3CF /* Performance-umbrella.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Performance-umbrella.h"; sourceTree = "<group>"; };
 		5E8BCFC3078CD3AC0B835FB6 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* Performance_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Performance_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -121,74 +106,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		546DDB791E768295008CC3CF /* BSBacktraceLogger */ = {
-			isa = PBXGroup;
-			children = (
-				546DDB771E768295008CC3CF /* BSBacktraceLogger.h */,
-				546DDB781E768295008CC3CF /* BSBacktraceLogger.m */,
-			);
-			path = BSBacktraceLogger;
-			sourceTree = "<group>";
-		};
-		546DDB7A1E768295008CC3CF /* ThirdParty */ = {
-			isa = PBXGroup;
-			children = (
-				546DDB791E768295008CC3CF /* BSBacktraceLogger */,
-			);
-			path = ThirdParty;
-			sourceTree = "<group>";
-		};
-		546DDB7D1E768295008CC3CF /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				546DDB7A1E768295008CC3CF /* ThirdParty */,
-				546DDB7B1E768295008CC3CF /* PFMMainThreadMonitor.h */,
-				546DDB7C1E768295008CC3CF /* PFMMainThreadMonitor.m */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		546DDB7E1E768295008CC3CF /* Performance */ = {
-			isa = PBXGroup;
-			children = (
-				546DDB7D1E768295008CC3CF /* Classes */,
-			);
-			path = Performance;
-			sourceTree = "<group>";
-		};
-		546DDB851E768295008CC3CF /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				546DDB7F1E768295008CC3CF /* Info.plist */,
-				546DDB801E768295008CC3CF /* Performance.modulemap */,
-				546DDB811E768295008CC3CF /* Performance.xcconfig */,
-				546DDB821E768295008CC3CF /* Performance-dummy.m */,
-				546DDB831E768295008CC3CF /* Performance-prefix.pch */,
-				546DDB841E768295008CC3CF /* Performance-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/Performance";
-			sourceTree = "<group>";
-		};
-		546DDB861E768295008CC3CF /* Performance */ = {
-			isa = PBXGroup;
-			children = (
-				546DDB7E1E768295008CC3CF /* Performance */,
-				546DDB851E768295008CC3CF /* Support Files */,
-			);
-			name = Performance;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		546DDB871E768295008CC3CF /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				546DDB861E768295008CC3CF /* Performance */,
-			);
-			name = "Development Pods";
-			path = ../Pods;
-			sourceTree = "<group>";
-		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
@@ -226,7 +143,6 @@
 		6003F593195388D20070C39A /* Example for Performance */ = {
 			isa = PBXGroup;
 			children = (
-				546DDB871E768295008CC3CF /* Development Pods */,
 				6003F59C195388D20070C39A /* PFMAppDelegate.h */,
 				6003F59D195388D20070C39A /* PFMAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -364,10 +280,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
-				546DDB8B1E768295008CC3CF /* Performance.xcconfig in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
-				546DDB8A1E768295008CC3CF /* Info.plist in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -480,12 +394,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				546DDB891E768295008CC3CF /* PFMMainThreadMonitor.m in Sources */,
 				6003F59E195388D20070C39A /* PFMAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* PFMViewController.m in Sources */,
-				546DDB8C1E768295008CC3CF /* Performance-dummy.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
-				546DDB881E768295008CC3CF /* BSBacktraceLogger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

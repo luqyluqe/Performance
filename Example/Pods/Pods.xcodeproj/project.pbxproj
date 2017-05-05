@@ -17,6 +17,9 @@
 		546DDB701E7680A6008CC3CF /* PFMMainThreadMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 546DDB6C1E7680A6008CC3CF /* PFMMainThreadMonitor.m */; };
 		546DDB751E7681C4008CC3CF /* BSBacktraceLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 546DDB731E7681C4008CC3CF /* BSBacktraceLogger.h */; };
 		546DDB761E7681C4008CC3CF /* BSBacktraceLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 546DDB741E7681C4008CC3CF /* BSBacktraceLogger.m */; };
+		54752C7D1EBC84300041CBCA /* PFMLogging.h in Headers */ = {isa = PBXBuildFile; fileRef = 54752C7C1EBC84300041CBCA /* PFMLogging.h */; };
+		54752C841EBC84A40041CBCA /* PFMConsoleLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 54752C821EBC84A40041CBCA /* PFMConsoleLogger.h */; };
+		54752C851EBC84A40041CBCA /* PFMConsoleLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 54752C831EBC84A40041CBCA /* PFMConsoleLogger.m */; };
 		B8D9D9FED47D1F59F0B9B01EA4856A6D /* Pods-Performance_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 06BAD647BEABB96DE9AEEFF629DBAB29 /* Pods-Performance_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E3AC12076619D92D73815C22317CF674 /* Pods-Performance_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8900AD04D151CF52FDA8B7A2EE38BEC9 /* Pods-Performance_Tests-dummy.m */; };
 		F86EFA88C42B8E302C6AB4D17BCBCA83 /* Pods-Performance_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6CF7FED6CCA8E33AF66F74A8F88D8C /* Pods-Performance_Example-dummy.m */; };
@@ -43,6 +46,9 @@
 		546DDB6C1E7680A6008CC3CF /* PFMMainThreadMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFMMainThreadMonitor.m; sourceTree = "<group>"; };
 		546DDB731E7681C4008CC3CF /* BSBacktraceLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSBacktraceLogger.h; sourceTree = "<group>"; };
 		546DDB741E7681C4008CC3CF /* BSBacktraceLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSBacktraceLogger.m; sourceTree = "<group>"; };
+		54752C7C1EBC84300041CBCA /* PFMLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFMLogging.h; sourceTree = "<group>"; };
+		54752C821EBC84A40041CBCA /* PFMConsoleLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFMConsoleLogger.h; sourceTree = "<group>"; };
+		54752C831EBC84A40041CBCA /* PFMConsoleLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFMConsoleLogger.m; sourceTree = "<group>"; };
 		638EFF2658BCEB0881E6F8DA031E3230 /* Pods-Performance_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Performance_Example.release.xcconfig"; sourceTree = "<group>"; };
 		6B4214CA780DDF370BF79E4E5C0EC26A /* Pods-Performance_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Performance_Tests.modulemap"; sourceTree = "<group>"; };
 		741C4DD6A81DDE77937A6CB120696042 /* Performance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Performance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -233,6 +239,9 @@
 				546DDB711E7681C4008CC3CF /* ThirdParty */,
 				546DDB6B1E7680A6008CC3CF /* PFMMainThreadMonitor.h */,
 				546DDB6C1E7680A6008CC3CF /* PFMMainThreadMonitor.m */,
+				54752C7C1EBC84300041CBCA /* PFMLogging.h */,
+				54752C821EBC84A40041CBCA /* PFMConsoleLogger.h */,
+				54752C831EBC84A40041CBCA /* PFMConsoleLogger.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -254,9 +263,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54752C7D1EBC84300041CBCA /* PFMLogging.h in Headers */,
 				546DDB751E7681C4008CC3CF /* BSBacktraceLogger.h in Headers */,
 				546DDB6F1E7680A6008CC3CF /* PFMMainThreadMonitor.h in Headers */,
 				1558D57C05E9084423EAADF5715D9BAA /* Performance-umbrella.h in Headers */,
+				54752C841EBC84A40041CBCA /* PFMConsoleLogger.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +378,7 @@
 				546DDB761E7681C4008CC3CF /* BSBacktraceLogger.m in Sources */,
 				546DDB701E7680A6008CC3CF /* PFMMainThreadMonitor.m in Sources */,
 				3D6782275FA1FD207B66EE21E9F34150 /* Performance-dummy.m in Sources */,
+				54752C851EBC84A40041CBCA /* PFMConsoleLogger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

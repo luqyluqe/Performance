@@ -8,6 +8,7 @@
 
 #import "PFMMainThreadMonitor.h"
 #import "BSBacktraceLogger.h"
+#import "PFMConsoleLogger.h"
 
 @interface PFMMainThreadMonitor ()
 
@@ -58,7 +59,7 @@
                 self.endTime=CFAbsoluteTimeGetCurrent();
                 if (self.callStack) {
                     NSString* border=@"================================================================================";
-                    NSLog(@"\ntime cost : %f\n%@\n%@\n%@\n\n",self.endTime-self.startTime,border,self.callStack,border);
+                    [self.logger log:[NSString stringWithFormat:@"\ntime cost : %f\n%@\n%@\n%@\n\n",self.endTime-self.startTime,border,self.callStack,border]];
                     self.callStack=nil;
                 }
                 if (self.timedOut) {
@@ -94,6 +95,14 @@
             self.callStack=[[BSBacktraceLogger bs_backtraceOfMainThread] stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\n"]];
         }
     }
+}
+
+-(id<PFMLogging>)logger
+{
+    if (!_logger) {
+        _logger=[[PFMConsoleLogger alloc] init];
+    }
+    return _logger;
 }
 
 @end

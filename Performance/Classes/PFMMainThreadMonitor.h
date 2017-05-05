@@ -6,9 +6,11 @@
 //
 //
 
-#import <Foundation/Foundation.h>
+#import "PFMLogging.h"
 
 @interface PFMMainThreadMonitor : NSObject
+
+@property (nonatomic,strong) id<PFMLogging> logger;
 
 @property (nonatomic,assign) NSTimeInterval timeout;
 
